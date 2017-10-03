@@ -1,0 +1,36 @@
+<FaultRule name="QuotaViolation">
+    <Step>
+        <Name>AssignMessage.Error.QuotaViolation</Name>
+    </Step>
+    <Condition>fault.name = "QuotaViolation"</Condition>
+</FaultRule>
+<FaultRule name="SpikeArrestViolatiob">
+    <Step>
+        <Name>AssignMessage.Error.SpikeArrestViolation</Name>
+    </Step>
+    <Condition>fault.name = "SpikeArrestViolation"</Condition>
+</FaultRule>
+<FaultRule name="InvalidRequest">
+    <Step>
+        <Name>AssignMessage.Error.InvalidRequest</Name>
+    </Step>
+    <Condition>fault.name = "invalid_request"</Condition>
+</FaultRule>
+<FaultRule name="UnsupportedGrantType">
+    <Step>
+        <Name>AssignMessage.Error.UnsupportedGrantType</Name>
+    </Step>
+    <Condition>fault.name = "UnSupportedGrantType"</Condition>
+</FaultRule>
+<FaultRule name="Unauthorized">
+    <Step>
+        <Name>AssignMessage.Error.Unauthorized</Name>
+    </Step>
+    <Condition>fault.name = "invalid_client" OR fault.name = "InvalidClientIdentifier" OR fault.name = "invalid_access_token" OR fault.name = "InvalidAccessToken" OR fault.name = "access_token_expired"</Condition>
+</FaultRule>
+<FaultRule name="Forbidden">
+    <Step>
+        <Name>AssignMessage.Error.Forbidden</Name>
+    </Step>
+    <Condition>fault.name = "InsufficientScope" OR fault.name = "InvalidAPICallAsNoApiProductMatchFound" OR fault.name = "apiresource_doesnot_exist"</Condition>
+</FaultRule>

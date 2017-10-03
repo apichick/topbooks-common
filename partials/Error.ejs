@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="<%= name %>">
+    <AssignVariable>
+        <Name>flow.error.message</Name>
+        <Value><%= message %></Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.error.code</Name>
+        <Value><%= status %>.<%= apiProxyId %>.<%= sequenceNumber %></Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.error.status</Name>
+        <Value><%= status %></Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.error.error</Name>
+        <Value><%= error %></Value>
+    </AssignVariable>
+</AssignMessage>

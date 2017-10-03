@@ -1,0 +1,10 @@
+<DefaultFaultRule>
+    <AlwaysEnforce>true</AlwaysEnforce>
+    <Step>
+        <Name>AssignMessage.Error.ProxyInternalServerError</Name>
+        <Condition>flow.error.code = NULL</Condition>
+    </Step>
+    <Step>
+        <Name>RaiseFault.Json</Name>
+    </Step>
+</DefaultFaultRule>

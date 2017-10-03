@@ -1,0 +1,11 @@
+<Flow name="Ping">
+	<Request>
+		<%- include(partialsDir + '/BasicAuth') %>
+	</Request>
+	<Response>
+		<Step>
+			<Name>Javascript.Ping</Name>
+		</Step>
+	</Response>
+	<Condition>request.verb = "GET" and proxy.pathsuffix = "/ping"</Condition>
+</Flow>

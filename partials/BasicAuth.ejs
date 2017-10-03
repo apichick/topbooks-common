@@ -1,0 +1,14 @@
+<Step>
+    <Name>BasicAuthentication.Decode</Name>
+</Step>
+<Step>
+    <Name>VerifyAPIKey</Name>
+</Step>
+<Step>
+    <Name>AssignMessage.Error.Unauthorized</Name>
+    <Condition>verifyapikey.VerifyAPIKey.failed = true OR flow.auth.password != verifyapikey.VerifyAPIKey.client_secret</Condition>
+</Step>
+<Step>
+    <Name>RaiseFault.GoToFaultRules</Name>
+    <Condition>flow.error.code != NULL</Condition>
+</Step>
